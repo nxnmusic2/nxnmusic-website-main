@@ -38,26 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(element);
     });
 
-    // Booking Form Submission (Placeholder)
-    const form = document.querySelector('.booking-form');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // In a real scenario, this would send data to a backend or email service
-            const btn = form.querySelector('button');
-            const originalText = btn.innerText;
-            
-            btn.innerText = 'Sent!';
-            btn.style.borderColor = 'var(--neon-green)';
-            btn.style.color = 'var(--neon-green)';
-            
-            setTimeout(() => {
-                alert("Thank you for your inquiry! nxnmusic_ management will be in touch shortly.");
-                form.reset();
-                btn.innerText = originalText;
-                btn.style.borderColor = '';
-                btn.style.color = '';
-            }, 500);
+   
         });
     }
 });
